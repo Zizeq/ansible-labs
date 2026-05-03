@@ -1,0 +1,9 @@
+#Jakub Dykier 236641
+- import_playbook: update.yml
+- import_playbook: db_setup.yml
+- import_playbook: install_git.yml
+- import_playbook: install_dev_tools.yml
+- import_playbook: install_minio.yml
+- import_playbook: manage-access.yml
+- import_playbook: install_nginx.yml
+- import_playbook: deploy.yml
