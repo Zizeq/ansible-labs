@@ -34,14 +34,14 @@
 
     - name: Step 4 - Allow Postgres to listen on all interfaces
       lineinfile:
-        path: /etc/postgresql/16/main/postgresql.conf
+        path: /etc/postgresql/14/main/postgresql.conf
         regexp: "^#?listen_addresses ="
         line: "listen_addresses = '*'"
       notify: Restart Postgres
 
     - name: Step 5 - Add pg_hba.conf entry allowing login from app IP
       lineinfile:
-        path: /etc/postgresql/16/main/pg_hba.conf
+        path: /etc/postgresql/14/main/pg_hba.conf
         line: "host all all 10.0.0.0/8 md5"
       notify: Restart Postgres
 
